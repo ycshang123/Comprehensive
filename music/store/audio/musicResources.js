@@ -18,7 +18,7 @@ export default {
 			}
 		},
 		{
-			id: 20001,
+			id: 20003,
 			name: "I Adore You",
 			src: '/static/mp3/I Adore You.mp3',
 			singer: {
@@ -27,7 +27,7 @@ export default {
 			}
 		},
 		{
-			id: 20001,
+			id: 20004,
 			name: "末日长河",
 			src: 'http://music.163.com/song/media/outer/url?id=26643898.mp3',
 			singer: {
@@ -36,7 +36,7 @@ export default {
 			}
 		},
 		{
-			id: 20001,
+			id: 20005,
 			name: "牺牲的一半",
 			src: '/static/mp3/易烊千玺-牺牲的一半.mp3',
 			singer: {
