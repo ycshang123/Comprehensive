@@ -1,6 +1,6 @@
 <template>
 	<!-- 根据neightStatus的值切换白天和黑夜模式 -->
-	<view style="height: 100vh;" :class="nightStatus ?'neightTheme' :''">
+	<view style="height: 100vh;" :class="nightStatus ?'nightTheme':''">
 		<view class="d-inline-block w-100 text-center py-4">
 			<view>
 				<text class="font">歌曲:</text>
@@ -55,8 +55,8 @@
 					<my-icon iconId="icon-aixinfengxian" iconSize="60"></my-icon>
 					<text class="pt-1">收藏</text>
 				</view>
-				<view class="flex flex-column align-center" @tap="changeStstus('nightStatus')">
-					<my-icon iconId="icon-yejianmoshi" iconSize="60"></my-icon>
+				<view class="flex flex-column align-center" @tap="chageStatus('nightStatus')" style="background-color: #0056B3;">
+					<my-icon :iconId="!nightStatus ? 'icon-yejianmoshi' : 'icon-yueliang'" iconSize="60"></my-icon>
 					<text class="pt-1">夜间模式</text>
 				</view>
 			</view>
@@ -80,7 +80,7 @@
 			<view class="text-ellipsis w-100">{{ singerSynopsis }}</view>
 		</view>
 		<!-- 播放列表 -->
-		<view class="fixed-bottom shadow p-2 " style="height: 400rpx; border-radius: 30rpx;">
+		<!-- <view class="fixed-bottom shadow p-2" style="height: 400rpx; border-radius: 30rpx;">
 			<view class="font-weight-bold" style="height: 60rpx">列表选项</view>
 			<scroll-view scroll-y style="height: 350rpx;">
 				<block v-for="(item, index) in audioList" :key="item.id">
@@ -94,7 +94,7 @@
 					</view>
 				</block>
 			</scroll-view>
-		</view>
+		</view> -->
 	</view>
 </template>
 
@@ -123,10 +123,11 @@ export default {
 		...mapGetters(['audioName', 'singerName', 'singerSynopsis'])
 	},
 	methods: {
+		// 改变状态
+		chageStatus(statusType) {
+			this[statusType] = !this[statusType];
+		},
 		...mapActions(['sliderToPlay']),
-		changeStstus(statusType){
-			this[statusType] = !this[statusType]
-		}
 	}
 };
 </script>
