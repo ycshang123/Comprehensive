@@ -7,6 +7,10 @@
     <groupId>com.soft1851</groupId>
     <artifactId>soft-news</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>soft-news-common</module>
+        <module>soft-news-model</module>
+    </modules>
     <packaging>pom</packaging>
 
 
