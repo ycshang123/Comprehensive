@@ -14,7 +14,7 @@
     <dependencies>
         <dependency>
             <groupId>com.soft1851</groupId>
-            <artifactId>soft-news-model</artifactId>
+            <artifactId>soft-news-common</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
             <dependency>
@@ -29,6 +29,12 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-configuration-processor</artifactId>
             </dependency>
+        <!--mapper-->
+        <dependency>
+            <groupId>tk.mybatis</groupId>
+            <artifactId>mapper-spring-boot-starter</artifactId>
+            <version>1.2.4</version>
+        </dependency>
     </dependencies>
 
 

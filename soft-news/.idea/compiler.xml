@@ -6,16 +6,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="soft-news-common" />
+        <module name="mybatis-generator-database" />
         <module name="soft-news-model" />
+        <module name="soft-news-common" />
+        <module name="soft-news-service-user-model" />
         <module name="soft-news-service-admin" />
         <module name="soft-news-service-api" />
-        <module name="soft-news-service-user-model" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="8">
-      <module name="soft-news-service-user" target="1.8" />
-    </bytecodeTargetLevel>
+    <bytecodeTargetLevel target="8" />
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
@@ -23,7 +22,6 @@
       <module name="soft-news-model" options="-parameters" />
       <module name="soft-news-service-admin" options="-parameters" />
       <module name="soft-news-service-api" options="-parameters" />
-      <module name="soft-news-service-user" options="-parameters" />
       <module name="soft-news-service-user-model" options="-parameters" />
     </option>
   </component>
