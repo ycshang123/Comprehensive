@@ -10,10 +10,12 @@
         <module name="soft-news-model" />
         <module name="soft-news-service-admin" />
         <module name="soft-news-service-api" />
-        <module name="soft-news-service-user" />
+        <module name="soft-news-service-user-model" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="8" />
+    <bytecodeTargetLevel target="8">
+      <module name="soft-news-service-user" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
@@ -22,6 +24,7 @@
       <module name="soft-news-service-admin" options="-parameters" />
       <module name="soft-news-service-api" options="-parameters" />
       <module name="soft-news-service-user" options="-parameters" />
+      <module name="soft-news-service-user-model" options="-parameters" />
     </option>
   </component>
 </project>

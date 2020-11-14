@@ -11,9 +11,15 @@
         <module>soft-news-common</module>
         <module>soft-news-model</module>
         <module>soft-news-service-api</module>
-        <module>soft-news-service-user</module>
         <module>soft-news-service-admin</module>
+        <module>soft-news-service-user-model</module>
     </modules>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+        </dependency>
+    </dependencies>
     <packaging>pom</packaging>
 
 
@@ -56,6 +62,7 @@
 
         <slf4j.version>1.7.21</slf4j.version>
         <joda-time.version>2.10.6</joda-time.version>
+        <lombok.version>1.18.12</lombok.version>
     </properties>
 
     <!--
@@ -185,6 +192,13 @@
                 <version>${joda-time.version}</version>
             </dependency>
 
+            <!--lombok-->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+                <scope>provided</scope>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
