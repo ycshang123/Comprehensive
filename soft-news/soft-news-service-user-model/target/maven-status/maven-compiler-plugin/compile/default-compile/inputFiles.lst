@@ -1,6 +1,8 @@
 D:\dev\PraticalSecond\soft-news\soft-news-service-user-model\src\main\java\com\soft1851\user\mapper\FansMapper.java
 D:\dev\PraticalSecond\soft-news\soft-news-service-user-model\src\main\java\com\soft1851\user\Application.java
+D:\dev\PraticalSecond\soft-news\soft-news-service-user-model\src\main\java\com\soft1851\user\service\UserService.java
 D:\dev\PraticalSecond\soft-news\soft-news-service-user-model\src\main\java\com\soft1851\user\controller\HelloController.java
+D:\dev\PraticalSecond\soft-news\soft-news-service-user-model\src\main\java\com\soft1851\user\service\impl\UserServiceImpl.java
 D:\dev\PraticalSecond\soft-news\soft-news-service-user-model\src\main\java\com\soft1851\user\controller\PassportController.java
 D:\dev\PraticalSecond\soft-news\soft-news-service-user-model\src\main\java\com\soft1851\user\controller\UserController.java
 D:\dev\PraticalSecond\soft-news\soft-news-service-user-model\src\main\java\com\soft1851\user\mapper\AppUserMapper.java
