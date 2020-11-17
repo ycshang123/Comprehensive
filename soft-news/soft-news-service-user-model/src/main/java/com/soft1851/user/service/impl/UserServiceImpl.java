@@ -7,8 +7,10 @@ import com.soft1851.result.ResponseStatusEnum;
 import com.soft1851.user.mapper.AppUserMapper;
 import com.soft1851.user.service.UserService;
 import com.soft1851.utils.DateUtil;
+import com.soft1851.utils.JsonUtil;
 import com.soft1851.utils.redis.RedisOperator;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.n3r.idworker.Sid;
 import org.n3r.idworker.utils.DesensitizationUtil;
 import org.n3r.idworker.utils.UserStatus;
@@ -22,6 +24,7 @@ import javax.annotation.Resource;
 import java.util.Date;
 
 @Service
+@Slf4j
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
 public class UserServiceImpl implements UserService {
 
@@ -66,6 +69,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public AppUser getUser(String userId) {
+        log.info("从数据库查询用户信息");
         return appUserMapper.selectByPrimaryKey(userId);
     }
 
@@ -74,13 +78,17 @@ public class UserServiceImpl implements UserService {
     @Override
     public void updateUserInfo(UpdateUserInfoBO userInfoBO) {
         AppUser userInfo = new AppUser();
-        BeanUtils.copyProperties(userInfoBO,userInfo);
+        BeanUtils.copyProperties(userInfoBO, userInfo);
         userInfo.setUpdatedTime(new Date());
         userInfo.setActiveStatus(UserStatus.ACTIVE.type);
         int result = appUserMapper.updateByPrimaryKeySelective(userInfo);
-        if(result !=1){
+        if (result != 1) {
             GraceException.display(ResponseStatusEnum.USER_UPDATE_ERROR);
         }
+        String userId = userInfoBO.getId();
+//        再次查询用户的最新消息，放入redis中
+        AppUser user = getUser(userId);
+        redis.set(REDIS_USER_INFO + ":" + userId, JsonUtil.objectToJson(user));
 
     }
 }
