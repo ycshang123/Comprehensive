@@ -77,6 +77,9 @@ public class UserServiceImpl implements UserService {
     @Transactional(rollbackFor = Exception.class)
     @Override
     public void updateUserInfo(UpdateUserInfoBO userInfoBO) {
+        String userId = userInfoBO.getId();
+//        保证双写一致，先删除redis中的数据，然后更新数据库
+        redis.del(REDIS_USER_INFO+":"+userId);
         AppUser userInfo = new AppUser();
         BeanUtils.copyProperties(userInfoBO, userInfo);
         userInfo.setUpdatedTime(new Date());
@@ -85,10 +88,16 @@ public class UserServiceImpl implements UserService {
         if (result != 1) {
             GraceException.display(ResponseStatusEnum.USER_UPDATE_ERROR);
         }
-        String userId = userInfoBO.getId();
+
 //        再次查询用户的最新消息，放入redis中
         AppUser user = getUser(userId);
         redis.set(REDIS_USER_INFO + ":" + userId, JsonUtil.objectToJson(user));
-
+//        缓存双删策略
+        try {
+            Thread.sleep(100);
+            redis.del(REDIS_USER_INFO+":"+userId);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }
