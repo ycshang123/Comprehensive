@@ -1,6 +1,9 @@
 package com.soft1851.user.service.impl;
 
+import com.soft1851.exception.GraceException;
 import com.soft1851.pojo.AppUser;
+import com.soft1851.pojo.bo.UpdateUserInfoBO;
+import com.soft1851.result.ResponseStatusEnum;
 import com.soft1851.user.mapper.AppUserMapper;
 import com.soft1851.user.service.UserService;
 import com.soft1851.utils.DateUtil;
@@ -9,6 +12,7 @@ import lombok.RequiredArgsConstructor;
 import org.n3r.idworker.Sid;
 import org.n3r.idworker.utils.DesensitizationUtil;
 import org.n3r.idworker.utils.UserStatus;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -63,5 +67,20 @@ public class UserServiceImpl implements UserService {
     @Override
     public AppUser getUser(String userId) {
         return appUserMapper.selectByPrimaryKey(userId);
+    }
+
+
+    @Transactional(rollbackFor = Exception.class)
+    @Override
+    public void updateUserInfo(UpdateUserInfoBO userInfoBO) {
+        AppUser userInfo = new AppUser();
+        BeanUtils.copyProperties(userInfoBO,userInfo);
+        userInfo.setUpdatedTime(new Date());
+        userInfo.setActiveStatus(UserStatus.ACTIVE.type);
+        int result = appUserMapper.updateByPrimaryKeySelective(userInfo);
+        if(result !=1){
+            GraceException.display(ResponseStatusEnum.USER_UPDATE_ERROR);
+        }
+
     }
 }
