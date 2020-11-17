@@ -19,7 +19,7 @@ public interface UserControllerApi {
     Object getAllUsers();
 
 
-    @ApiOperation(value = "获得用户基本信息",notes = "获得用户基本信息",httpMethod = "POST")
+    @ApiOperation(value = "获得用户账户信息",notes = "获得用户账户信息",httpMethod = "POST")
     @PostMapping("/userInfo")
     GraceResult getUserInfo(@RequestParam String userId);
 
