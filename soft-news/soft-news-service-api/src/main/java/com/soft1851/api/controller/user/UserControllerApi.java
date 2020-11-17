@@ -38,7 +38,5 @@ public interface UserControllerApi {
     @ApiOperation(value = "获得用户基础信息", notes = "获得用户基本信息", httpMethod = "POST")
     GraceResult getUserBasicInfo(@RequestParam String userId);
 
-    @PostMapping("/fans/follow")
-    @ApiOperation(value = "获得用户粉丝", notes = "获得用户粉丝", httpMethod = "POST")
-    GraceResult getUserFollowInfo(@RequestParam String userId);
+
 }

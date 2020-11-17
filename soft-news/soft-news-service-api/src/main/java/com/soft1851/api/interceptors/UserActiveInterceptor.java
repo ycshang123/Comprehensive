@@ -32,6 +32,7 @@ public class UserActiveInterceptor implements HandlerInterceptor {
         }
         assert appUser != null;
         if (appUser.getActiveStatus() == null || appUser.getActiveStatus() != UserStatus.ACTIVE.type) {
+            GraceException.display(ResponseStatusEnum.USER_INACTIVE_ERROR);
             return false;
         }
         return true;

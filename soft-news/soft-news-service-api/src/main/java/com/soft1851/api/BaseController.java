@@ -23,14 +23,15 @@ public class BaseController {
     public static final String MOBILE_SMSCODE = "mobile:smscode";
     public static final String REDIS_USER_TOKEN = "redis_user_token";
     public static final String REDIS_USER_INFO = "redis_user_info";
-    public static final Integer COOKIE_MONTH = 30*24*60*60;
+    public static final Integer COOKIE_MONTH = 30 * 24 * 60 * 60;
+    public static  final  Integer COOKIE_DELETE = 0;
     @Value("${website.domain-name}")
     public String DOMAIN_NAME;
 
     /**
      * 获取BO的错误信息，可以通过统一的异常处理返回给客户端
-     * @param result 入参
      *
+     * @param result 入参
      */
 
     public Map<String, String> getErrors(BindingResult result) {
@@ -41,28 +42,29 @@ public class BaseController {
             String field = error.getField();
 //            验证码的错误消息
             String msg = error.getDefaultMessage();
-            map.put(field,msg);
+            map.put(field, msg);
         }
         return map;
     }
 
     /**
      * 设置cookie
+     *
      * @param request
      * @param response
      * @param cookieName
      * @param cookieValue
      * @param maxAge
      */
-    public void SetCookie (HttpServletRequest request,
-                           HttpServletResponse response,
-                           String cookieName,
-                           String cookieValue,
-                           Integer maxAge){
+    public void SetCookie(HttpServletRequest request,
+                          HttpServletResponse response,
+                          String cookieName,
+                          String cookieValue,
+                          Integer maxAge) {
         try {
-            cookieValue = URLEncoder.encode(cookieValue,"utf-8");
-            setCookieValue(request,response,cookieName,cookieValue,maxAge);
-            Cookie cookie = new Cookie(cookieName,cookieValue);
+            cookieValue = URLEncoder.encode(cookieValue, "utf-8");
+            setCookieValue(request, response, cookieName, cookieValue, maxAge);
+            Cookie cookie = new Cookie(cookieName, cookieValue);
             cookie.setMaxAge(maxAge);
             cookie.setDomain(DOMAIN_NAME);
             cookie.setPath("/");
@@ -76,8 +78,8 @@ public class BaseController {
     public void setCookieValue(HttpServletRequest request, HttpServletResponse response,
                                String cookieName,
                                String cookieValue,
-                               Integer maxAge){
-        Cookie cookie = new Cookie(cookieName,cookieValue);
+                               Integer maxAge) {
+        Cookie cookie = new Cookie(cookieName, cookieValue);
         cookie.setMaxAge(maxAge);
         cookie.setDomain(DOMAIN_NAME);
         cookie.setPath("/");
