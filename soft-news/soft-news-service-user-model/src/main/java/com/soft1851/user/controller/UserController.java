@@ -12,7 +12,9 @@ import com.soft1851.user.mapper.AppUserMapper;
 import com.soft1851.user.service.UserService;
 import com.soft1851.utils.JsonUtil;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
+import org.n3r.idworker.utils.UserStatus;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
@@ -22,6 +24,7 @@ import javax.validation.Valid;
 import java.util.Map;
 
 @RestController
+@Slf4j
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
 public class UserController extends BaseController implements UserControllerApi {
     private final AppUserMapper appUserMapper;
@@ -87,5 +90,21 @@ public class UserController extends BaseController implements UserControllerApi 
         BeanUtils.copyProperties(user, userVO);
         return GraceResult.ok(userVO);
 
+    }
+
+    @Override
+    public GraceResult getUserFollowInfo(String userId) {
+        log.info("进入接口");
+        log.info(">>>>>>>>>>>>>..." + userId);
+        //        判断不能为空
+        if (StringUtils.isBlank(userId)) {
+            return GraceResult.errorCustom(ResponseStatusEnum.UN_LOGIN);
+        }
+
+        AppUser user = getUser(userId);
+        if (user.getActiveStatus().equals(UserStatus.FROZEN.type)) {
+            return GraceResult.errorCustom(ResponseStatusEnum.USER_FROZEN);
+        }
+        return GraceResult.ok(userId);
     }
 }
