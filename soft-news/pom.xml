@@ -13,6 +13,7 @@
         <module>soft-news-service-api</module>
         <module>soft-news-service-admin</module>
         <module>soft-news-service-user-model</module>
+        <module>soft-news-service-files</module>
     </modules>
     <dependencies>
         <dependency>
