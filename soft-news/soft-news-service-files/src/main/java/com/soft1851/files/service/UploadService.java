@@ -15,5 +15,15 @@ public interface UploadService {
      */
 
     String uploadFiles(MultipartFile file,String fileExtName) throws Exception;
+
+    /**
+     * OSS文件上传
+     * @param file
+     * @param userId
+     * @param fileExtName
+     * @return
+     * @throws Exception
+     */
+    public String uploadOSS(MultipartFile file,String userId,String fileExtName) throws Exception;
 }
 

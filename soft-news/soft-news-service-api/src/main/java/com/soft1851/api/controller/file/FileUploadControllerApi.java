@@ -15,4 +15,15 @@ public interface FileUploadControllerApi {
     @ApiOperation(value = "上传用户头像",notes="上传用户头像",httpMethod = "POST")
     @PostMapping("UploadFace")
     GraceResult uploadFace(@RequestParam String userId, MultipartFile file) throws  Exception;
+
+    /**
+     * 多文件上传
+     * @param userId
+     * @param files
+     * @return
+     * @throws Exception
+     */
+    @ApiOperation(value = "上传多个文件",notes="上传多个文件",httpMethod = "POST")
+    @PostMapping("/uploadSomeFiles")
+    GraceResult uploadSomeFiles (@RequestParam String userId, MultipartFile[] files) throws Exception;
 }
