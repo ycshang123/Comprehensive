@@ -5,6 +5,7 @@ import com.soft1851.files.resource.FileResource;
 import com.soft1851.files.service.UploadService;
 import com.soft1851.result.GraceResult;
 import com.soft1851.result.ResponseStatusEnum;
+import com.soft1851.utils.extend.AliImageReviewUtil;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
@@ -21,6 +22,7 @@ import java.util.List;
 public class FileUploadController implements FileUploadControllerApi {
     private final UploadService uploadService;
     private final FileResource fileResource;
+    private final AliImageReviewUtil aliImageReviewUtil;
 
     @Override
     public GraceResult uploadFace(String userId, MultipartFile file) throws Exception {
@@ -55,7 +57,23 @@ public class FileUploadController implements FileUploadControllerApi {
             return GraceResult.errorCustom(ResponseStatusEnum.FILE_FORMATTER_FAILD);
         }
 
-        return GraceResult.ok(finalPath);
+        return GraceResult.ok(doAliImageReview(finalPath));
+    }
+
+    public static final String FAILED_IMAGE_URL = "https://wx2.sinaimg.cn/mw690/00669kenly1gkuansyvoaj32003007wl.jpg";
+
+    private String doAliImageReview(String pendingImageUrl) {
+        log.info(pendingImageUrl);
+        boolean result = false;
+        try {
+            result = aliImageReviewUtil.reviewImage(pendingImageUrl);
+        } catch (Exception e) {
+            System.err.println("图片识别出错");
+        }
+        if (!result) {
+            return FAILED_IMAGE_URL;
+        }
+        return pendingImageUrl;
     }
 
     @Override
