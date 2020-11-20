@@ -12,11 +12,6 @@
     <artifactId>soft-news-service-api</artifactId>
 
     <dependencies>
-        <dependency>
-            <groupId>com.soft1851</groupId>
-            <artifactId>soft-news-common</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter</artifactId>
