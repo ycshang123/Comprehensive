@@ -9,11 +9,16 @@ import com.soft1851.utils.extend.AliImageReviewUtil;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
+import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.mongodb.gridfs.GridFsTemplate;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 @RestController
@@ -23,6 +28,7 @@ public class FileUploadController implements FileUploadControllerApi {
     private final UploadService uploadService;
     private final FileResource fileResource;
     private final AliImageReviewUtil aliImageReviewUtil;
+    private  final GridFsTemplate gridFsTemplate;
 
     @Override
     public GraceResult uploadFace(String userId, MultipartFile file) throws Exception {
@@ -112,5 +118,27 @@ public class FileUploadController implements FileUploadControllerApi {
             }
         }
         return GraceResult.ok(imageUrlList);
+    }
+
+    @Override
+    public GraceResult uploadToGridFs(String username, MultipartFile multipartFile) {
+        HashMap<String, String> meteData = new HashMap<>();
+        InputStream is = null;
+        try {
+            is = multipartFile.getInputStream();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        // 获取文件源名称
+        String fileName = multipartFile.getOriginalFilename();
+        assert is != null;
+        // 进行文件存储
+        ObjectId objectId = gridFsTemplate.store(is, fileName, meteData);
+        try {
+            is.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return GraceResult.ok(objectId.toString());
     }
 }
