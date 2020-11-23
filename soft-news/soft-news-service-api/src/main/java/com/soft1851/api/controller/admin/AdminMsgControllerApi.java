@@ -61,4 +61,8 @@ public interface AdminMsgControllerApi {
     @PostMapping("updateAdmin")
     GraceResult updateAdmin(HttpServletRequest request,
                             HttpServletResponse response, @RequestBody NewAdminBO newAdminBO);
+
+    @PostMapping("adminFaceLogin")
+    @ApiOperation(value = "管理员人脸登录",notes = "管理员人脸登录",httpMethod = "POST")
+    GraceResult adminFaceLogin(@RequestBody AdminLoginBO adminLoginBO, HttpServletRequest request, HttpServletResponse response);
 }
