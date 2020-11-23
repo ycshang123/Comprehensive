@@ -9,6 +9,6 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan(basePackages = {"com.soft1851","org.n3r.idworker"})
 public class Application {
     public static void main(String[] args) {
-        SpringApplication.run(Application.class,args);  
+        SpringApplication.run(Application.class,args);
     }
 }
