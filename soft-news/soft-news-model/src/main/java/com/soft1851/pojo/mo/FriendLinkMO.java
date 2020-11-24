@@ -15,7 +15,7 @@ public class FriendLinkMO {
     @Field("link_name")
     private String linkName;
     @Field("link_url")
-    private Integer linkUrl;
+    private String linkUrl;
     @Field("is_delete")
     private Integer isDelete;
     @Field("create_time")
@@ -39,11 +39,11 @@ public class FriendLinkMO {
         this.linkName = linkName;
     }
 
-    public Integer getLinkUrl() {
+    public String getLinkUrl() {
         return linkUrl;
     }
 
-    public void setLinkUrl(Integer linkUrl) {
+    public void setLinkUrl(String linkUrl) {
         this.linkUrl = linkUrl;
     }
 

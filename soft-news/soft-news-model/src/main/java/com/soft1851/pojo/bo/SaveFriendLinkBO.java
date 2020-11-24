@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @Builder
 public class SaveFriendLinkBO {
     private String Id;
-    private String isDelete;
+    private Integer isDelete;
     private String linkName;
     private String linkUrl;
 }
