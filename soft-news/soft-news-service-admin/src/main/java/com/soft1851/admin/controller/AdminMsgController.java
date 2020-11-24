@@ -127,7 +127,6 @@ public class AdminMsgController extends BaseController implements AdminMsgContro
         if(StringUtils.isBlank(adminLoginBO.getUsername())){
             return GraceResult.errorCustom(ResponseStatusEnum.ADMIN_USERNAME_NULL_ERROR);
         }
-        System.out.println(">>>>>>>>>>>>>>>"+adminLoginBO);
         String tempFace64 = adminLoginBO.getImg64();
         if(StringUtils.isBlank(tempFace64)){
             return GraceResult.errorCustom(ResponseStatusEnum.ADMIN_FACE_NULL_ERROR);

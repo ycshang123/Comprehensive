@@ -253,7 +253,7 @@ public class FaceVerifyUtil {
 //        String face3 = "http://122.152.205.72:88/group1/M00/00/05/CpoxxF5MvvGAfnLXAAIHiv37wNk363.jpg";
 //        String face4 = "http://122.152.205.72:88/group1/M00/00/05/CpoxxF5Mv3yAH74mAACOiTd9pO4462.jpg";
 //
-//        boolean result = new FaceVerifyUtils().faceVerify(FaceVerifyType.IMAGE_URL.type, face3, face4, 60);
+//        boolean result = new FaceVerifyUtil().faceVerify(FaceVerifyType.IMAGE_URL.type, face3, face4, 60);
 //
 //        logger.info("人脸对比是否成功：{}", result);
 //    }

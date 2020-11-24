@@ -198,7 +198,7 @@ public class FileUploadController implements FileUploadControllerApi {
         if(!fileTemp.exists()){
             fileTemp.mkdirs();
         }
-        File myFile = new File("D:\\images\\faceImage"+fileName);
+        File myFile = new File("D:\\images\\faceImage\\"+fileName);
 //        创建文件输出流
         OutputStream os = new FileOutputStream(myFile);
 //        下载到服务器哦或本地
