@@ -1,5 +1,6 @@
 package com.soft1851.validate;
 
+
 import com.soft1851.utils.UrlUtil;
 
 import javax.validation.ConstraintValidator;
