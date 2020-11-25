@@ -28,8 +28,8 @@ import java.util.Date;
 @Slf4j
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
 public class ArticleServiceImpl implements ArticleService {
-    private  final ArticleMapper articleMapper;
-    private  final Sid sid;
+    private final ArticleMapper articleMapper;
+    private final Sid sid;
     private final ArticleMapperCustom articleMapperCustom;
     private final AliTextReviewUtil aliTextReviewUtil;
 
@@ -38,7 +38,7 @@ public class ArticleServiceImpl implements ArticleService {
         String articleId = sid.nextShort();
         Article article = new Article();
 
-        BeanUtils.copyProperties(newArticleBO,article);
+        BeanUtils.copyProperties(newArticleBO, article);
         article.setId(articleId);
         article.setCategoryId(category.getId());
         article.setArticleStatus(ArticleReviewStatus.REVIEWING.type);
@@ -47,28 +47,28 @@ public class ArticleServiceImpl implements ArticleService {
         article.setIsDelete(YesOrNo.No.type);
         article.setCreateTime(new Date());
         article.setUpdateTime(new Date());
-        if (article.getIsAppoint().equals(ArticleAppointType.TIMING.type)){
+        if (article.getIsAppoint().equals(ArticleAppointType.TIMING.type)) {
             article.setPublishTime(newArticleBO.getPublishTime());
-        }else if(article.getIsAppoint().equals(ArticleAppointType.IMMEDIATELY.type)){
+        } else if (article.getIsAppoint().equals(ArticleAppointType.IMMEDIATELY.type)) {
             article.setPublishTime(new Date());
         }
 
         int res = articleMapper.insert(article);
-        if (res != 1){
+        if (res != 1) {
             GraceException.display(ResponseStatusEnum.ARTICLE_CREATE_ERROR);
         }
 //        通过阿里只能AI实现对文章文本的自动检测
-        String reviewResult = aliTextReviewUtil.reviewTextContent(newArticleBO.getTitle()+newArticleBO.getContent());
-        log.info("审核结果"+ reviewResult);
-        if(ArticleReviewLevel.PASS.type.equalsIgnoreCase(reviewResult)){
+        String reviewResult = aliTextReviewUtil.reviewTextContent(newArticleBO.getTitle() + newArticleBO.getContent());
+        log.info("审核结果" + reviewResult);
+        if (ArticleReviewLevel.PASS.type.equalsIgnoreCase(reviewResult)) {
             log.info("审核通过");
-            this.updateArticleStatus(articleId,ArticleReviewStatus.SUCCESS.type);
-        }else if (ArticleReviewLevel.REVIEW.type.equalsIgnoreCase(reviewResult)){
+            this.updateArticleStatus(articleId, ArticleReviewStatus.SUCCESS.type);
+        } else if (ArticleReviewLevel.REVIEW.type.equalsIgnoreCase(reviewResult)) {
             log.info("需要人工复审");
-            this.updateArticleStatus(articleId,ArticleReviewStatus.WAITING_MANUAL.type);
-        }else if(ArticleReviewLevel.BLOCK.type.equalsIgnoreCase(reviewResult)){
+            this.updateArticleStatus(articleId, ArticleReviewStatus.WAITING_MANUAL.type);
+        } else if (ArticleReviewLevel.BLOCK.type.equalsIgnoreCase(reviewResult)) {
             log.info("审核不通过");
-            this.updateArticleStatus(articleId,ArticleReviewStatus.FAILED.type);
+            this.updateArticleStatus(articleId, ArticleReviewStatus.FAILED.type);
         }
     }
 
@@ -78,21 +78,53 @@ public class ArticleServiceImpl implements ArticleService {
     public void updateArticleStatus(String articleId, Integer pendingStatus) {
         Example example = new Example(Article.class);
         Example.Criteria criteria = example.createCriteria();
-        criteria.andEqualTo("id",articleId);
+        criteria.andEqualTo("id", articleId);
         Article pendingArticle = new Article();
         pendingArticle.setArticleStatus(pendingStatus);
-        int res = articleMapper.updateByExampleSelective(pendingArticle,example);
-        if(res !=1){
+        int res = articleMapper.updateByExampleSelective(pendingArticle, example);
+        if (res != 1) {
             GraceException.display(ResponseStatusEnum.ARTICLE_REVIEW_ERROR);
+        }
+
+
+    }
+
+    @Transactional(rollbackFor = {Exception.class})
+    @Override
+    public void updateAppointToPublish() {
+        articleMapperCustom.updateAppointToPublish();
+    }
+
+    @Transactional(rollbackFor = {Exception.class})
+    @Override
+    public void deleteArticle(String userId, String articleId) {
+        Example articleExample =makeExampleCriteria(userId,articleId);
+        Article pending = new Article();
+        pending.setIsDelete(YesOrNo.YES.type);
+        int result = articleMapper.updateByExampleSelective(pending,articleExample);
+        if(result != 1){
+            GraceException.display(ResponseStatusEnum.ARTICLE_DELETE_ERROR);
         }
 
 
     }
     @Transactional(rollbackFor = {Exception.class})
     @Override
-    public void updateAppointToPublish() {
-        articleMapperCustom.updateAppointToPublish();
+    public void withdrawArticle(String userId, String articleId) {
+        Example articleExample = makeExampleCriteria(userId,articleId);
+        Article pending = new Article();
+        pending.setArticleStatus(ArticleReviewStatus.WITHDRAW.type);
+        int result = articleMapper.updateByExampleSelective(pending,articleExample);
+        if(result !=1){
+            GraceException.display(ResponseStatusEnum.ARTICLE_WITHDRAW_ERROR);
+        }
 
-
+    }
+    private Example makeExampleCriteria(String userId,String articleId){
+        Example articleExample = new Example(Article.class);
+        Example.Criteria criteria = articleExample.createCriteria();
+        criteria.andEqualTo("publishUserId",userId);
+        criteria.andEqualTo("id",articleId);
+        return articleExample;
     }
 }
