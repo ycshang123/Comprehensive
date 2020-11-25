@@ -11,12 +11,10 @@
 	<div id="app">
 		<div class="content">
 			<div class="left">
-				<img style="width: 100%; height: 400px; margin:auto; border-radius: 8px;" src="./image/left.jpg"
-					v-show="!isFaceLogin" />
-				<video id="video" width="630rpx" height="370rpx" autoplay="autoplay"
-					style="width: 100%; height: 400px; margin:auto; border-radius: 8px;" v-show="isFaceLogin"></video>
-				<canvas id="canvas" style="width: 100%; height: 400px; margin:auto; border-radius: 8px;" width="630rpx"
-					height="370rpx" v-show="isFaceLogin"></canvas>
+				<img class="border-radis" src="./image/left.jpg" v-show="!isFaceLogin" />
+				<video id="video" width="630rpx" height="370rpx" autoplay="autoplay" class="border-radis"
+					v-show="isFaceLogin"></video>
+				<canvas id="canvas" class="border-radis" width="630rpx" height="370rpx" v-show="isFaceLogin"></canvas>
 			</div>
 			<div class="right">
 				<div style="margin-bottom: 10px;">
@@ -35,8 +33,8 @@
 				</div>
 				<div class="bottom">
 					<div style="display: flex; align-items: center;">
-						<input type="checkbox"  v-model="isFaceLogin" @change="useFaceLogin()" />
-						<span class="font" for="form-face">人脸识别登录</span>
+						<input type="checkbox" v-model="isFaceLogin" @change="useFaceLogin()" />
+						<span class="font">人脸识别登录</span>
 					</div>
 					<div>
 						<span class="font-little">建议在Chrome下使用本系统</span>
@@ -65,7 +63,7 @@
 			},
 			methods: {
 				login() {
-					console.log(this.isFaceLogin)
+					console.lo
 					let username = this.username;
 					if (username == null || username == undefined || username == "") {
 						alert("用户名不能为空！");
@@ -111,7 +109,7 @@
 				useFaceLogin() {
 					if (this.isFaceLogin) {
 						this.openFace()
-					}else{
+					} else {
 						this.closeFace()
 					}
 				},
@@ -234,6 +232,13 @@
 			border: none;
 			border-radius: 5px;
 			background-color: rgb(114, 205, 183);
+		}
+
+		.border-radis {
+			width: 100%;
+			height: 400px;
+			margin: auto;
+			border-radius: 8px;
 		}
 	</style>
 </body>
