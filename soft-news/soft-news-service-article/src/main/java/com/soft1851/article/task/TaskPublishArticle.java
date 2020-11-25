@@ -23,6 +23,6 @@ public class TaskPublishArticle {
     private void publishArticles(){
         System.out.println("执行定时任务"+ LocalDateTime.now());
 //        调用文章service,把当前时间应该发布的定时文章，状态改为即时
-        articleService.updateAppointToPublish();
+        articleService.updateAppointToPublish();     
     }
 }
