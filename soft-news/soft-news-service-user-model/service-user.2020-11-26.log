@@ -147,3 +147,384 @@ Caused by: java.net.ConnectException: Connection refused: connect
 2020-11-26 14:30:29.677 [http-nio-8003-exec-5] INFO  c.s.u.service.impl.UserServiceImpl - 从数据库查询用户信息
 2020-11-26 14:30:29.739 [http-nio-8003-exec-5] ERROR c.s.api.aspect.ServiceLogAspect - 当前执行耗时:64
 2020-11-26 14:30:30.454 [http-nio-8003-exec-5] ERROR c.s.api.aspect.ServiceLogAspect - 当前执行耗时:782
+2020-11-26 14:40:28.638 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.1.5.Final
+2020-11-26 14:40:28.652 [main] INFO  com.soft1851.user.Application - Starting Application on LAPTOP-2Q04ONAQ with PID 2764 (D:\dev\PraticalSecond\soft-news\soft-news-service-user-model\target\classes started by ycshang in D:\dev\PraticalSecond\soft-news)
+2020-11-26 14:40:28.653 [main] INFO  com.soft1851.user.Application - The following profiles are active: dev
+2020-11-26 14:40:28.959 [background-preinit] WARN  o.s.h.c.j.Jackson2ObjectMapperBuilder - For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2020-11-26 14:40:29.400 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-26 14:40:29.401 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2020-11-26 14:40:29.417 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13ms. Found 0 MongoDB repository interfaces.
+2020-11-26 14:40:29.428 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-26 14:40:29.429 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-11-26 14:40:29.437 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 2ms. Found 0 Redis repository interfaces.
+2020-11-26 14:40:29.519 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.soft1851.user]' package. Please check your configuration.
+2020-11-26 14:40:29.927 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8003 (http)
+2020-11-26 14:40:29.934 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8003"]
+2020-11-26 14:40:29.934 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-11-26 14:40:29.934 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-11-26 14:40:29.936 [main] INFO  o.a.c.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2020-11-26 14:40:29.936 [main] INFO  o.a.c.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-11-26 14:40:29.936 [main] INFO  o.a.c.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-11-26 14:40:29.939 [main] INFO  o.a.c.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2020-11-26 14:40:30.017 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-11-26 14:40:30.017 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1319 ms
+2020-11-26 14:40:31.176 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-26 14:40:31.276 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2020-11-26 14:40:31.277 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2020-11-26 14:40:31.277 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2020-11-26 14:40:31.278 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2020-11-26 14:40:31.371 [main] WARN  o.s.data.convert.CustomConversions - Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-11-26 14:40:31.528 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8003"]
+2020-11-26 14:40:31.546 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8003 (http) with context path ''
+2020-11-26 14:40:31.551 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-11-26 14:40:31.559 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-11-26 14:40:31.565 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-11-26 14:40:31.681 [main] INFO  com.soft1851.user.Application - Started Application in 3.414 seconds (JVM running for 4.271)
+2020-11-26 14:46:03.587 [http-nio-8003-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-26 14:46:03.588 [http-nio-8003-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-11-26 14:46:03.595 [http-nio-8003-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 7 ms
+2020-11-26 14:46:53.481 [http-nio-8003-exec-6] INFO  c.s.api.aspect.ServiceLogAspect - ====开始执行class com.soft1851.user.service.impl.FansServiceImplunfollow======
+2020-11-26 14:46:53.515 [http-nio-8003-exec-6] INFO  com.zaxxer.hikari.HikariDataSource - DateSourceHikariCP - Starting...
+2020-11-26 14:46:53.690 [http-nio-8003-exec-6] INFO  com.zaxxer.hikari.HikariDataSource - DateSourceHikariCP - Start completed.
+2020-11-26 14:46:54.288 [http-nio-8003-exec-6] ERROR c.s.api.aspect.ServiceLogAspect - 当前执行耗时:807
+2020-11-26 15:00:17.514 [http-nio-8003-exec-1] INFO  c.s.api.aspect.ServiceLogAspect - ====开始执行class com.soft1851.user.service.impl.FansServiceImplfollow======
+2020-11-26 15:00:17.514 [http-nio-8003-exec-1] INFO  c.s.api.aspect.ServiceLogAspect - ====开始执行class com.soft1851.user.service.impl.UserServiceImplgetUser======
+2020-11-26 15:00:17.516 [http-nio-8003-exec-1] INFO  c.s.u.service.impl.UserServiceImpl - 从数据库查询用户信息
+2020-11-26 15:00:17.535 [http-nio-8003-exec-1] ERROR c.s.api.aspect.ServiceLogAspect - 当前执行耗时:21
+2020-11-26 15:00:17.550 [http-nio-8003-exec-1] ERROR c.s.api.aspect.ServiceLogAspect - 当前执行耗时:36
+2020-11-26 15:00:25.416 [http-nio-8003-exec-4] INFO  c.s.api.aspect.ServiceLogAspect - ====开始执行class com.soft1851.user.service.impl.FansServiceImplfollow======
+2020-11-26 15:00:25.417 [http-nio-8003-exec-4] INFO  c.s.api.aspect.ServiceLogAspect - ====开始执行class com.soft1851.user.service.impl.UserServiceImplgetUser======
+2020-11-26 15:00:25.417 [http-nio-8003-exec-4] INFO  c.s.u.service.impl.UserServiceImpl - 从数据库查询用户信息
+2020-11-26 15:00:25.419 [http-nio-8003-exec-4] ERROR c.s.api.aspect.ServiceLogAspect - 当前执行耗时:2
+2020-11-26 15:00:25.432 [http-nio-8003-exec-4] ERROR c.s.api.aspect.ServiceLogAspect - 当前执行耗时:15
+2020-11-26 15:00:50.625 [http-nio-8003-exec-7] INFO  c.s.api.aspect.ServiceLogAspect - ====开始执行class com.soft1851.user.service.impl.FansServiceImplfollow======
+2020-11-26 15:00:50.626 [http-nio-8003-exec-7] INFO  c.s.api.aspect.ServiceLogAspect - ====开始执行class com.soft1851.user.service.impl.UserServiceImplgetUser======
+2020-11-26 15:00:50.626 [http-nio-8003-exec-7] INFO  c.s.u.service.impl.UserServiceImpl - 从数据库查询用户信息
+2020-11-26 15:00:50.630 [http-nio-8003-exec-7] ERROR c.s.api.aspect.ServiceLogAspect - 当前执行耗时:4
+2020-11-26 15:00:50.634 [http-nio-8003-exec-7] ERROR c.s.api.aspect.ServiceLogAspect - 当前执行耗时:8
+2020-11-26 15:00:58.716 [http-nio-8003-exec-9] INFO  c.s.api.aspect.ServiceLogAspect - ====开始执行class com.soft1851.user.service.impl.FansServiceImplfollow======
+2020-11-26 15:00:58.716 [http-nio-8003-exec-9] INFO  c.s.api.aspect.ServiceLogAspect - ====开始执行class com.soft1851.user.service.impl.UserServiceImplgetUser======
+2020-11-26 15:00:58.716 [http-nio-8003-exec-9] INFO  c.s.u.service.impl.UserServiceImpl - 从数据库查询用户信息
+2020-11-26 15:00:58.718 [http-nio-8003-exec-9] ERROR c.s.api.aspect.ServiceLogAspect - 当前执行耗时:2
+2020-11-26 15:00:58.731 [http-nio-8003-exec-9] ERROR c.s.api.aspect.ServiceLogAspect - 当前执行耗时:15
+2020-11-26 15:30:45.938 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.1.5.Final
+2020-11-26 15:30:45.961 [main] INFO  com.soft1851.user.Application - Starting Application on LAPTOP-2Q04ONAQ with PID 26732 (D:\dev\PraticalSecond\soft-news\soft-news-service-user-model\target\classes started by ycshang in D:\dev\PraticalSecond\soft-news)
+2020-11-26 15:30:45.962 [main] INFO  com.soft1851.user.Application - The following profiles are active: dev
+2020-11-26 15:30:46.240 [background-preinit] WARN  o.s.h.c.j.Jackson2ObjectMapperBuilder - For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2020-11-26 15:30:46.690 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-26 15:30:46.690 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2020-11-26 15:30:46.706 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13ms. Found 0 MongoDB repository interfaces.
+2020-11-26 15:30:46.716 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-26 15:30:46.717 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-11-26 15:30:46.725 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 2ms. Found 0 Redis repository interfaces.
+2020-11-26 15:30:46.808 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.soft1851.user]' package. Please check your configuration.
+2020-11-26 15:30:47.213 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8003 (http)
+2020-11-26 15:30:47.220 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8003"]
+2020-11-26 15:30:47.220 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-11-26 15:30:47.220 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-11-26 15:30:47.221 [main] INFO  o.a.c.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2020-11-26 15:30:47.222 [main] INFO  o.a.c.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-11-26 15:30:47.222 [main] INFO  o.a.c.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-11-26 15:30:47.225 [main] INFO  o.a.c.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2020-11-26 15:30:47.303 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-11-26 15:30:47.303 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1302 ms
+2020-11-26 15:30:48.477 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-26 15:30:48.565 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2020-11-26 15:30:48.565 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2020-11-26 15:30:48.565 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2020-11-26 15:30:48.565 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2020-11-26 15:30:48.653 [main] WARN  o.s.data.convert.CustomConversions - Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-11-26 15:30:48.814 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8003"]
+2020-11-26 15:30:48.832 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8003 (http) with context path ''
+2020-11-26 15:30:48.837 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-11-26 15:30:48.845 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-11-26 15:30:48.851 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-11-26 15:30:48.971 [main] INFO  com.soft1851.user.Application - Started Application in 3.417 seconds (JVM running for 4.295)
+2020-11-26 15:35:22.138 [http-nio-8003-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-26 15:35:22.138 [http-nio-8003-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-11-26 15:35:22.145 [http-nio-8003-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 7 ms
+2020-11-26 15:35:45.036 [http-nio-8003-exec-2] INFO  c.s.api.aspect.ServiceLogAspect - ====开始执行class com.soft1851.user.service.impl.FansServiceImplqueryFansCounts======
+2020-11-26 15:35:45.072 [http-nio-8003-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - DateSourceHikariCP - Starting...
+2020-11-26 15:35:45.235 [http-nio-8003-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - DateSourceHikariCP - Start completed.
+2020-11-26 15:35:45.265 [http-nio-8003-exec-2] ERROR c.s.api.aspect.ServiceLogAspect - 当前执行耗时:228
+2020-11-26 15:35:45.266 [http-nio-8003-exec-2] INFO  c.s.api.aspect.ServiceLogAspect - ====开始执行class com.soft1851.user.service.impl.FansServiceImplqueryFansCounts======
+2020-11-26 15:35:45.267 [http-nio-8003-exec-2] ERROR c.s.api.aspect.ServiceLogAspect - 当前执行耗时:1
+2020-11-26 15:36:20.218 [http-nio-8003-exec-9] INFO  c.s.api.aspect.ServiceLogAspect - ====开始执行class com.soft1851.user.service.impl.FansServiceImplqueryRegionRatioCounts======
+2020-11-26 15:36:20.271 [http-nio-8003-exec-9] ERROR c.s.api.aspect.ServiceLogAspect - 当前执行耗时:52
+2020-11-26 15:37:44.585 [http-nio-8003-exec-6] INFO  c.s.api.aspect.ServiceLogAspect - ====开始执行class com.soft1851.user.service.impl.FansServiceImplqueryRegionRatioCounts======
+2020-11-26 15:37:44.617 [http-nio-8003-exec-6] ERROR c.s.api.aspect.ServiceLogAspect - 当前执行耗时:31
+2020-11-26 15:39:00.287 [http-nio-8003-exec-10] INFO  c.s.api.aspect.ServiceLogAspect - ====开始执行class com.soft1851.user.service.impl.FansServiceImplqueryRegionRatioCounts======
+2020-11-26 15:39:00.319 [http-nio-8003-exec-10] ERROR c.s.api.aspect.ServiceLogAspect - 当前执行耗时:31
+2020-11-26 15:41:37.024 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.1.5.Final
+2020-11-26 15:41:37.044 [main] INFO  com.soft1851.user.Application - Starting Application on LAPTOP-2Q04ONAQ with PID 6272 (D:\dev\PraticalSecond\soft-news\soft-news-service-user-model\target\classes started by ycshang in D:\dev\PraticalSecond\soft-news)
+2020-11-26 15:41:37.046 [main] INFO  com.soft1851.user.Application - The following profiles are active: dev
+2020-11-26 15:41:37.365 [background-preinit] WARN  o.s.h.c.j.Jackson2ObjectMapperBuilder - For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2020-11-26 15:41:37.779 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-26 15:41:37.780 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2020-11-26 15:41:37.796 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13ms. Found 0 MongoDB repository interfaces.
+2020-11-26 15:41:37.806 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-26 15:41:37.807 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-11-26 15:41:37.814 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 2ms. Found 0 Redis repository interfaces.
+2020-11-26 15:41:37.894 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.soft1851.user]' package. Please check your configuration.
+2020-11-26 15:41:38.296 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8003 (http)
+2020-11-26 15:41:38.303 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8003"]
+2020-11-26 15:41:38.303 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-11-26 15:41:38.304 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-11-26 15:41:38.305 [main] INFO  o.a.c.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2020-11-26 15:41:38.305 [main] INFO  o.a.c.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-11-26 15:41:38.305 [main] INFO  o.a.c.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-11-26 15:41:38.314 [main] INFO  o.a.c.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2020-11-26 15:41:38.396 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-11-26 15:41:38.396 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1311 ms
+2020-11-26 15:41:39.569 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-26 15:41:39.655 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2020-11-26 15:41:39.656 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2020-11-26 15:41:39.656 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2020-11-26 15:41:39.656 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2020-11-26 15:41:39.745 [main] WARN  o.s.data.convert.CustomConversions - Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-11-26 15:41:39.902 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8003"]
+2020-11-26 15:41:39.921 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8003 (http) with context path ''
+2020-11-26 15:41:39.926 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-11-26 15:41:39.934 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-11-26 15:41:39.939 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-11-26 15:41:40.068 [main] INFO  com.soft1851.user.Application - Started Application in 3.412 seconds (JVM running for 4.263)
+2020-11-26 15:42:20.242 [http-nio-8003-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-26 15:42:20.242 [http-nio-8003-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-11-26 15:42:20.249 [http-nio-8003-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 7 ms
+2020-11-26 15:42:20.271 [http-nio-8003-exec-1] INFO  c.s.api.aspect.ServiceLogAspect - ====开始执行class com.soft1851.user.service.impl.FansServiceImplqueryRegionRatioCounts======
+2020-11-26 15:42:20.282 [http-nio-8003-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Handler dispatch failed; nested exception is java.lang.IllegalAccessError: class com.soft1851.user.service.impl.FansServiceImpl (in unnamed module @0x402f8592) cannot access class jdk.internal.jline.internal.Log (in module jdk.internal.le) because module jdk.internal.le does not export jdk.internal.jline.internal to unnamed module @0x402f8592] with root cause
+java.lang.IllegalAccessError: class com.soft1851.user.service.impl.FansServiceImpl (in unnamed module @0x402f8592) cannot access class jdk.internal.jline.internal.Log (in module jdk.internal.le) because module jdk.internal.le does not export jdk.internal.jline.internal to unnamed module @0x402f8592
+	at com.soft1851.user.service.impl.FansServiceImpl.queryRegionRatioCounts(FansServiceImpl.java:89)
+	at com.soft1851.user.service.impl.FansServiceImpl$$FastClassBySpringCGLIB$$7affce8f.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:88)
+	at com.soft1851.api.aspect.ServiceLogAspect.recordTimeOfService(ServiceLogAspect.java:19)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:644)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:633)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:95)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691)
+	at com.soft1851.user.service.impl.FansServiceImpl$$EnhancerBySpringCGLIB$$7cecaf9c.queryRegionRatioCounts(<generated>)
+	at com.soft1851.user.controller.FansController.queryRatioByRegion(FansController.java:49)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-11-26 15:43:04.545 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.1.5.Final
+2020-11-26 15:43:04.565 [main] INFO  com.soft1851.user.Application - Starting Application on LAPTOP-2Q04ONAQ with PID 29988 (D:\dev\PraticalSecond\soft-news\soft-news-service-user-model\target\classes started by ycshang in D:\dev\PraticalSecond\soft-news)
+2020-11-26 15:43:04.566 [main] INFO  com.soft1851.user.Application - The following profiles are active: dev
+2020-11-26 15:43:04.874 [background-preinit] WARN  o.s.h.c.j.Jackson2ObjectMapperBuilder - For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2020-11-26 15:43:05.295 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-26 15:43:05.296 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2020-11-26 15:43:05.311 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13ms. Found 0 MongoDB repository interfaces.
+2020-11-26 15:43:05.321 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-26 15:43:05.322 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-11-26 15:43:05.329 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 2ms. Found 0 Redis repository interfaces.
+2020-11-26 15:43:05.412 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.soft1851.user]' package. Please check your configuration.
+2020-11-26 15:43:05.823 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8003 (http)
+2020-11-26 15:43:05.830 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8003"]
+2020-11-26 15:43:05.830 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-11-26 15:43:05.830 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-11-26 15:43:05.831 [main] INFO  o.a.c.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2020-11-26 15:43:05.831 [main] INFO  o.a.c.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-11-26 15:43:05.832 [main] INFO  o.a.c.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-11-26 15:43:05.834 [main] INFO  o.a.c.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2020-11-26 15:43:05.913 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-11-26 15:43:05.913 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1303 ms
+2020-11-26 15:43:07.064 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-26 15:43:07.151 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2020-11-26 15:43:07.151 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2020-11-26 15:43:07.152 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2020-11-26 15:43:07.152 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2020-11-26 15:43:07.239 [main] WARN  o.s.data.convert.CustomConversions - Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-11-26 15:43:07.391 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8003"]
+2020-11-26 15:43:07.419 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8003 (http) with context path ''
+2020-11-26 15:43:07.424 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-11-26 15:43:07.432 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-11-26 15:43:07.437 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-11-26 15:43:07.555 [main] INFO  com.soft1851.user.Application - Started Application in 3.365 seconds (JVM running for 4.205)
+2020-11-26 15:43:36.965 [http-nio-8003-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-26 15:43:36.965 [http-nio-8003-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-11-26 15:43:36.972 [http-nio-8003-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 7 ms
+2020-11-26 15:44:04.194 [http-nio-8003-exec-10] INFO  c.s.api.aspect.ServiceLogAspect - ====开始执行class com.soft1851.user.service.impl.FansServiceImplqueryRegionRatioCounts======
+2020-11-26 15:44:04.197 [http-nio-8003-exec-10] INFO  c.s.u.service.impl.FansServiceImpl - 0>>>>>>>>>>>>>>>>>>>>>
+2020-11-26 15:44:04.230 [http-nio-8003-exec-10] INFO  com.zaxxer.hikari.HikariDataSource - DateSourceHikariCP - Starting...
+2020-11-26 15:44:04.392 [http-nio-8003-exec-10] INFO  com.zaxxer.hikari.HikariDataSource - DateSourceHikariCP - Start completed.
+2020-11-26 15:44:04.463 [http-nio-8003-exec-10] ERROR c.s.api.aspect.ServiceLogAspect - 当前执行耗时:269
+2020-11-26 15:46:57.206 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.1.5.Final
+2020-11-26 15:46:57.227 [main] INFO  com.soft1851.user.Application - Starting Application on LAPTOP-2Q04ONAQ with PID 19228 (D:\dev\PraticalSecond\soft-news\soft-news-service-user-model\target\classes started by ycshang in D:\dev\PraticalSecond\soft-news)
+2020-11-26 15:46:57.228 [main] INFO  com.soft1851.user.Application - The following profiles are active: dev
+2020-11-26 15:46:57.514 [background-preinit] WARN  o.s.h.c.j.Jackson2ObjectMapperBuilder - For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2020-11-26 15:46:57.946 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-26 15:46:57.946 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2020-11-26 15:46:57.964 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14ms. Found 0 MongoDB repository interfaces.
+2020-11-26 15:46:57.975 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-26 15:46:57.976 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-11-26 15:46:57.986 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 3ms. Found 0 Redis repository interfaces.
+2020-11-26 15:46:58.074 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.soft1851.user]' package. Please check your configuration.
+2020-11-26 15:46:58.483 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8003 (http)
+2020-11-26 15:46:58.490 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8003"]
+2020-11-26 15:46:58.490 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-11-26 15:46:58.490 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-11-26 15:46:58.491 [main] INFO  o.a.c.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2020-11-26 15:46:58.492 [main] INFO  o.a.c.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-11-26 15:46:58.492 [main] INFO  o.a.c.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-11-26 15:46:58.494 [main] INFO  o.a.c.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2020-11-26 15:46:58.573 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-11-26 15:46:58.573 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1305 ms
+2020-11-26 15:46:59.728 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-26 15:46:59.823 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2020-11-26 15:46:59.824 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2020-11-26 15:46:59.824 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2020-11-26 15:46:59.824 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2020-11-26 15:46:59.913 [main] WARN  o.s.data.convert.CustomConversions - Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-11-26 15:47:00.054 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8003"]
+2020-11-26 15:47:00.072 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8003 (http) with context path ''
+2020-11-26 15:47:00.078 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-11-26 15:47:00.085 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-11-26 15:47:00.091 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-11-26 15:47:00.208 [main] INFO  com.soft1851.user.Application - Started Application in 3.372 seconds (JVM running for 4.196)
+2020-11-26 15:47:53.288 [http-nio-8003-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-26 15:47:53.288 [http-nio-8003-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-11-26 15:47:53.295 [http-nio-8003-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 7 ms
+2020-11-26 15:48:23.181 [http-nio-8003-exec-4] INFO  c.s.api.aspect.ServiceLogAspect - ====开始执行class com.soft1851.user.service.impl.FansServiceImplqueryRegionRatioCounts======
+2020-11-26 15:48:23.215 [http-nio-8003-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - DateSourceHikariCP - Starting...
+2020-11-26 15:48:23.377 [http-nio-8003-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - DateSourceHikariCP - Start completed.
+2020-11-26 15:48:23.453 [http-nio-8003-exec-4] INFO  c.s.u.service.impl.FansServiceImpl - [RegionRatioVO(name=北京, value=0), RegionRatioVO(name=天津, value=0), RegionRatioVO(name=上海, value=0), RegionRatioVO(name=重庆, value=0), RegionRatioVO(name=河北, value=0), RegionRatioVO(name=山西, value=0), RegionRatioVO(name=辽宁, value=0), RegionRatioVO(name=吉林, value=0), RegionRatioVO(name=黑龙江, value=0), RegionRatioVO(name=江苏, value=0), RegionRatioVO(name=浙江, value=0), RegionRatioVO(name=安徽, value=0), RegionRatioVO(name=福建, value=0), RegionRatioVO(name=江西, value=0), RegionRatioVO(name=山东, value=0), RegionRatioVO(name=河南, value=0), RegionRatioVO(name=湖北, value=0), RegionRatioVO(name=湖南, value=0), RegionRatioVO(name=广东, value=0), RegionRatioVO(name=海南, value=0), RegionRatioVO(name=四川, value=0), RegionRatioVO(name=贵州, value=0), RegionRatioVO(name=云南, value=0), RegionRatioVO(name=陕西, value=0), RegionRatioVO(name=甘肃, value=0), RegionRatioVO(name=青海, value=0), RegionRatioVO(name=台湾, value=0), RegionRatioVO(name=内蒙古, value=0), RegionRatioVO(name=广西, value=0), RegionRatioVO(name=西藏, value=0), RegionRatioVO(name=宁夏, value=0), RegionRatioVO(name=新疆, value=0), RegionRatioVO(name=香港, value=0), RegionRatioVO(name=澳门, value=0)]>>>>>>>>>>>>>>>>>
+2020-11-26 15:48:23.453 [http-nio-8003-exec-4] ERROR c.s.api.aspect.ServiceLogAspect - 当前执行耗时:272
+2020-11-26 16:02:11.133 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.1.5.Final
+2020-11-26 16:02:11.156 [main] INFO  com.soft1851.user.Application - Starting Application on LAPTOP-2Q04ONAQ with PID 25892 (D:\dev\PraticalSecond\soft-news\soft-news-service-user-model\target\classes started by ycshang in D:\dev\PraticalSecond\soft-news)
+2020-11-26 16:02:11.158 [main] INFO  com.soft1851.user.Application - The following profiles are active: dev
+2020-11-26 16:02:11.452 [background-preinit] WARN  o.s.h.c.j.Jackson2ObjectMapperBuilder - For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2020-11-26 16:02:11.905 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-26 16:02:11.905 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2020-11-26 16:02:11.922 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13ms. Found 0 MongoDB repository interfaces.
+2020-11-26 16:02:11.932 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-26 16:02:11.933 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-11-26 16:02:11.941 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 2ms. Found 0 Redis repository interfaces.
+2020-11-26 16:02:12.022 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.soft1851.user]' package. Please check your configuration.
+2020-11-26 16:02:12.435 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8003 (http)
+2020-11-26 16:02:12.442 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8003"]
+2020-11-26 16:02:12.443 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-11-26 16:02:12.443 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-11-26 16:02:12.444 [main] INFO  o.a.c.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2020-11-26 16:02:12.444 [main] INFO  o.a.c.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-11-26 16:02:12.444 [main] INFO  o.a.c.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-11-26 16:02:12.448 [main] INFO  o.a.c.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2020-11-26 16:02:12.528 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-11-26 16:02:12.528 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1325 ms
+2020-11-26 16:02:13.748 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-26 16:02:13.845 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2020-11-26 16:02:13.845 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2020-11-26 16:02:13.846 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2020-11-26 16:02:13.846 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2020-11-26 16:02:13.937 [main] WARN  o.s.data.convert.CustomConversions - Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-11-26 16:02:14.084 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8003"]
+2020-11-26 16:02:14.103 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8003 (http) with context path ''
+2020-11-26 16:02:14.108 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-11-26 16:02:14.116 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-11-26 16:02:14.122 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-11-26 16:02:14.242 [main] INFO  com.soft1851.user.Application - Started Application in 3.481 seconds (JVM running for 4.338)
+2020-11-26 16:02:50.184 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.1.5.Final
+2020-11-26 16:02:50.206 [main] INFO  com.soft1851.user.Application - Starting Application on LAPTOP-2Q04ONAQ with PID 21876 (D:\dev\PraticalSecond\soft-news\soft-news-service-user-model\target\classes started by ycshang in D:\dev\PraticalSecond\soft-news)
+2020-11-26 16:02:50.207 [main] INFO  com.soft1851.user.Application - The following profiles are active: dev
+2020-11-26 16:02:50.512 [background-preinit] WARN  o.s.h.c.j.Jackson2ObjectMapperBuilder - For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2020-11-26 16:02:50.968 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-26 16:02:50.969 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2020-11-26 16:02:50.985 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13ms. Found 0 MongoDB repository interfaces.
+2020-11-26 16:02:50.994 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-26 16:02:50.995 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-11-26 16:02:51.003 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 2ms. Found 0 Redis repository interfaces.
+2020-11-26 16:02:51.087 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.soft1851.user]' package. Please check your configuration.
+2020-11-26 16:02:51.498 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8003 (http)
+2020-11-26 16:02:51.505 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8003"]
+2020-11-26 16:02:51.505 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-11-26 16:02:51.505 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-11-26 16:02:51.506 [main] INFO  o.a.c.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2020-11-26 16:02:51.506 [main] INFO  o.a.c.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-11-26 16:02:51.507 [main] INFO  o.a.c.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-11-26 16:02:51.509 [main] INFO  o.a.c.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2020-11-26 16:02:51.589 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-11-26 16:02:51.589 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1337 ms
+2020-11-26 16:02:52.760 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-26 16:02:52.848 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2020-11-26 16:02:52.848 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2020-11-26 16:02:52.849 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2020-11-26 16:02:52.849 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2020-11-26 16:02:52.936 [main] WARN  o.s.data.convert.CustomConversions - Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-11-26 16:02:53.093 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8003"]
+2020-11-26 16:02:53.112 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8003 (http) with context path ''
+2020-11-26 16:02:53.117 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-11-26 16:02:53.125 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-11-26 16:02:53.131 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-11-26 16:02:53.251 [main] INFO  com.soft1851.user.Application - Started Application in 3.467 seconds (JVM running for 4.333)
+2020-11-26 16:04:15.800 [http-nio-8003-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-26 16:04:15.800 [http-nio-8003-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-11-26 16:04:15.808 [http-nio-8003-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 8 ms
+2020-11-26 16:16:31.812 [http-nio-8003-exec-7] INFO  c.s.api.aspect.ServiceLogAspect - ====开始执行class com.soft1851.user.service.impl.FansServiceImplqueryRegionRatioCounts======
+2020-11-26 16:16:31.815 [http-nio-8003-exec-7] INFO  c.s.u.service.impl.FansServiceImpl - com.soft1851.pojo.Fans@777964b1>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+2020-11-26 16:16:31.849 [http-nio-8003-exec-7] INFO  com.zaxxer.hikari.HikariDataSource - DateSourceHikariCP - Starting...
+2020-11-26 16:16:32.010 [http-nio-8003-exec-7] INFO  com.zaxxer.hikari.HikariDataSource - DateSourceHikariCP - Start completed.
+2020-11-26 16:16:32.086 [http-nio-8003-exec-7] INFO  c.s.u.service.impl.FansServiceImpl - [RegionRatioVO(name=北京, value=0), RegionRatioVO(name=天津, value=0), RegionRatioVO(name=上海, value=0), RegionRatioVO(name=重庆, value=0), RegionRatioVO(name=河北, value=0), RegionRatioVO(name=山西, value=0), RegionRatioVO(name=辽宁, value=0), RegionRatioVO(name=吉林, value=0), RegionRatioVO(name=黑龙江, value=0), RegionRatioVO(name=江苏, value=0), RegionRatioVO(name=浙江, value=0), RegionRatioVO(name=安徽, value=0), RegionRatioVO(name=福建, value=0), RegionRatioVO(name=江西, value=0), RegionRatioVO(name=山东, value=0), RegionRatioVO(name=河南, value=0), RegionRatioVO(name=湖北, value=0), RegionRatioVO(name=湖南, value=0), RegionRatioVO(name=广东, value=0), RegionRatioVO(name=海南, value=0), RegionRatioVO(name=四川, value=0), RegionRatioVO(name=贵州, value=0), RegionRatioVO(name=云南, value=0), RegionRatioVO(name=陕西, value=0), RegionRatioVO(name=甘肃, value=0), RegionRatioVO(name=青海, value=0), RegionRatioVO(name=台湾, value=0), RegionRatioVO(name=内蒙古, value=0), RegionRatioVO(name=广西, value=0), RegionRatioVO(name=西藏, value=0), RegionRatioVO(name=宁夏, value=0), RegionRatioVO(name=新疆, value=0), RegionRatioVO(name=香港, value=0), RegionRatioVO(name=澳门, value=0)]>>>>>>>>>>>>>>>>>
+2020-11-26 16:16:32.087 [http-nio-8003-exec-7] ERROR c.s.api.aspect.ServiceLogAspect - 当前执行耗时:275
