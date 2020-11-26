@@ -528,3 +528,45 @@ java.lang.IllegalAccessError: class com.soft1851.user.service.impl.FansServiceIm
 2020-11-26 16:16:32.010 [http-nio-8003-exec-7] INFO  com.zaxxer.hikari.HikariDataSource - DateSourceHikariCP - Start completed.
 2020-11-26 16:16:32.086 [http-nio-8003-exec-7] INFO  c.s.u.service.impl.FansServiceImpl - [RegionRatioVO(name=北京, value=0), RegionRatioVO(name=天津, value=0), RegionRatioVO(name=上海, value=0), RegionRatioVO(name=重庆, value=0), RegionRatioVO(name=河北, value=0), RegionRatioVO(name=山西, value=0), RegionRatioVO(name=辽宁, value=0), RegionRatioVO(name=吉林, value=0), RegionRatioVO(name=黑龙江, value=0), RegionRatioVO(name=江苏, value=0), RegionRatioVO(name=浙江, value=0), RegionRatioVO(name=安徽, value=0), RegionRatioVO(name=福建, value=0), RegionRatioVO(name=江西, value=0), RegionRatioVO(name=山东, value=0), RegionRatioVO(name=河南, value=0), RegionRatioVO(name=湖北, value=0), RegionRatioVO(name=湖南, value=0), RegionRatioVO(name=广东, value=0), RegionRatioVO(name=海南, value=0), RegionRatioVO(name=四川, value=0), RegionRatioVO(name=贵州, value=0), RegionRatioVO(name=云南, value=0), RegionRatioVO(name=陕西, value=0), RegionRatioVO(name=甘肃, value=0), RegionRatioVO(name=青海, value=0), RegionRatioVO(name=台湾, value=0), RegionRatioVO(name=内蒙古, value=0), RegionRatioVO(name=广西, value=0), RegionRatioVO(name=西藏, value=0), RegionRatioVO(name=宁夏, value=0), RegionRatioVO(name=新疆, value=0), RegionRatioVO(name=香港, value=0), RegionRatioVO(name=澳门, value=0)]>>>>>>>>>>>>>>>>>
 2020-11-26 16:16:32.087 [http-nio-8003-exec-7] ERROR c.s.api.aspect.ServiceLogAspect - 当前执行耗时:275
+2020-11-26 16:22:05.620 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.1.5.Final
+2020-11-26 16:22:05.642 [main] INFO  com.soft1851.user.Application - Starting Application on LAPTOP-2Q04ONAQ with PID 13448 (D:\dev\PraticalSecond\soft-news\soft-news-service-user-model\target\classes started by ycshang in D:\dev\PraticalSecond\soft-news)
+2020-11-26 16:22:05.643 [main] INFO  com.soft1851.user.Application - The following profiles are active: dev
+2020-11-26 16:22:05.944 [background-preinit] WARN  o.s.h.c.j.Jackson2ObjectMapperBuilder - For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2020-11-26 16:22:06.386 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-26 16:22:06.386 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2020-11-26 16:22:06.403 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13ms. Found 0 MongoDB repository interfaces.
+2020-11-26 16:22:06.413 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-26 16:22:06.414 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-11-26 16:22:06.422 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 2ms. Found 0 Redis repository interfaces.
+2020-11-26 16:22:06.503 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.soft1851.user]' package. Please check your configuration.
+2020-11-26 16:22:06.912 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8003 (http)
+2020-11-26 16:22:06.918 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8003"]
+2020-11-26 16:22:06.919 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-11-26 16:22:06.919 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-11-26 16:22:06.920 [main] INFO  o.a.c.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2020-11-26 16:22:06.920 [main] INFO  o.a.c.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-11-26 16:22:06.920 [main] INFO  o.a.c.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-11-26 16:22:06.923 [main] INFO  o.a.c.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2020-11-26 16:22:07.002 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-11-26 16:22:07.002 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1317 ms
+2020-11-26 16:22:08.160 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-26 16:22:08.257 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2020-11-26 16:22:08.258 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2020-11-26 16:22:08.258 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2020-11-26 16:22:08.258 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2020-11-26 16:22:08.346 [main] WARN  o.s.data.convert.CustomConversions - Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-11-26 16:22:08.490 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8003"]
+2020-11-26 16:22:08.509 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8003 (http) with context path ''
+2020-11-26 16:22:08.514 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-11-26 16:22:08.521 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-11-26 16:22:08.527 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-11-26 16:22:08.644 [main] INFO  com.soft1851.user.Application - Started Application in 3.396 seconds (JVM running for 4.243)
+2020-11-26 16:23:25.776 [http-nio-8003-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-26 16:23:25.776 [http-nio-8003-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-11-26 16:23:25.784 [http-nio-8003-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 8 ms
+2020-11-26 16:23:25.809 [http-nio-8003-exec-1] INFO  c.s.api.aspect.ServiceLogAspect - ====开始执行class com.soft1851.user.service.impl.FansServiceImplqueryRegionRatioCounts======
+2020-11-26 16:23:25.813 [http-nio-8003-exec-1] INFO  c.s.u.service.impl.FansServiceImpl - com.soft1851.pojo.Fans@6441729>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+2020-11-26 16:23:25.848 [http-nio-8003-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - DateSourceHikariCP - Starting...
+2020-11-26 16:23:26.018 [http-nio-8003-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - DateSourceHikariCP - Start completed.
+2020-11-26 16:23:26.106 [http-nio-8003-exec-1] INFO  c.s.u.service.impl.FansServiceImpl - [RegionRatioVO(name=北京, value=0), RegionRatioVO(name=天津, value=0), RegionRatioVO(name=上海, value=0), RegionRatioVO(name=重庆, value=0), RegionRatioVO(name=河北, value=0), RegionRatioVO(name=山西, value=0), RegionRatioVO(name=辽宁, value=0), RegionRatioVO(name=吉林, value=0), RegionRatioVO(name=黑龙江, value=0), RegionRatioVO(name=江苏, value=1), RegionRatioVO(name=浙江, value=0), RegionRatioVO(name=安徽, value=1), RegionRatioVO(name=福建, value=0), RegionRatioVO(name=江西, value=1), RegionRatioVO(name=山东, value=0), RegionRatioVO(name=河南, value=0), RegionRatioVO(name=湖北, value=0), RegionRatioVO(name=湖南, value=0), RegionRatioVO(name=广东, value=0), RegionRatioVO(name=海南, value=0), RegionRatioVO(name=四川, value=0), RegionRatioVO(name=贵州, value=0), RegionRatioVO(name=云南, value=0), RegionRatioVO(name=陕西, value=0), RegionRatioVO(name=甘肃, value=0), RegionRatioVO(name=青海, value=0), RegionRatioVO(name=台湾, value=0), RegionRatioVO(name=内蒙古, value=0), RegionRatioVO(name=广西, value=0), RegionRatioVO(name=西藏, value=0), RegionRatioVO(name=宁夏, value=0), RegionRatioVO(name=新疆, value=1), RegionRatioVO(name=香港, value=0), RegionRatioVO(name=澳门, value=0)]>>>>>>>>>>>>>>>>>
+2020-11-26 16:23:26.106 [http-nio-8003-exec-1] ERROR c.s.api.aspect.ServiceLogAspect - 当前执行耗时:296
