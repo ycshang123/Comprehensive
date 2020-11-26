@@ -33,3 +33,25 @@
 2020-11-25 10:35:42.389 [http-nio-8004-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2020-11-25 10:35:42.389 [http-nio-8004-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
 2020-11-25 10:35:42.424 [http-nio-8004-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 35 ms
+2020-11-25 13:51:59.356 [cluster-ClusterId{value='5fbdc00ba6651e37f4327ac9', description='null'}-120.26.184.121:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server 120.26.184.121:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:128)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:131)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.net.SocketException: Software caused connection abort: connect
+	at java.base/java.net.PlainSocketImpl.waitForConnect(Native Method)
+	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:107)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:403)
+	at java.base/java.net.Socket.connect(Socket.java:591)
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:64)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+	... 3 common frames omitted
+2020-11-25 14:23:33.749 [cluster-ClusterId{value='5fbdc00ba6651e37f4327ac9', description='null'}-120.26.184.121:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:161, serverValue:173}] to 120.26.184.121:27017
+2020-11-25 14:23:33.769 [cluster-ClusterId{value='5fbdc00ba6651e37f4327ac9', description='null'}-120.26.184.121:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=120.26.184.121:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 4, 2]}, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=19575700}
+2020-11-25 14:56:18.192 [cluster-ClusterId{value='5fbdc00ba6651e37f4327ac9', description='null'}-120.26.184.121:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:162, serverValue:174}] to 120.26.184.121:27017
+2020-11-25 16:18:16.701 [cluster-ClusterId{value='5fbdc00ba6651e37f4327ac9', description='null'}-120.26.184.121:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:163, serverValue:182}] to 120.26.184.121:27017
