@@ -4,7 +4,7 @@ exports.main = async (event, context) => {
 
 	if (event.action == 'getList') {
 		const openId = event.openId
-		const res = await db.collection('address').where({
+		const res = await db.collection('addresses').where({
 			openId
 		}).get()
 		const resData = res.data
@@ -12,23 +12,25 @@ exports.main = async (event, context) => {
 			status: 0,
 			data: resData
 		}
-
 	} else if (event.action == 'deleteAddress') {
 		const _id = event.id
 		const res = await db.collection('addresses').where({
 			_id
 		}).remove()
 
-		if (res.requestId) {
+		if (res.deleted === 1) {
 			return {
 				status: 0,
 				msg: '删除成功'
 			}
+		}else{
+			return {
+				status: -1,
+				msg: '删除失败'
+			}
+			
 		}
-		return {
-			status: -1,
-			msg: '删除失败'
-		}
+		
 
 	} else if (event.action == 'addAddress') {
 		const data = event.data

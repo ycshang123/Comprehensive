@@ -106,11 +106,13 @@ export default {
 								action:'deleteAddress'
 							}
 						}).then(res =>{
+							console.log(res)
 							if(res.result.status === 0){
 								uni.showToast({
 									title:"删除成功",
 									icon:'success'
 								});
+								this.getAddress();
 							}
 							uni.showModal({
 								content:res.result.msg,
