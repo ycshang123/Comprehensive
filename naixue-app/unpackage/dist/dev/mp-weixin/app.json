@@ -5,7 +5,10 @@
     "pages/take-foods/take-foods",
     "pages/mine/mine",
     "pages/login/login",
-    "pages/message/mesage"
+    "pages/message/mesage",
+    "pages/address/address",
+    "pages/address/add",
+    "pages/address/edit"
   ],
   "subPackages": [],
   "window": {
