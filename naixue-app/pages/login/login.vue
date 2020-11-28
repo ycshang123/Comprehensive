@@ -56,68 +56,127 @@
 </template>
 
 <script>
-	export default {
-		data() {
-			return {
-				
-			}
-		},
-		methods: {
-			
+import {mapState,mapMutations} from 'vuex'
+export default {
+	data() {
+		return {
+
 		}
+	},
+	methods: {
+		...mapMutations(['Login']),
+		wxLogin(e){
+			const that = this;
+			let userInfo = e.detail.userInfo;
+			console.log(userInfo);
+			uni.showLoading({
+				title:'登录中……'
+			});
+			return new Promise((resolve,reject) =>{
+				uni.login({
+					provider:'weixin',
+					success(login_res) {
+						if(login_res.code){
+							resolve(login_res.code)
+						}else{
+							reject(new Error('微信登录失败'));
+						}
+
+					},
+					fail(e){
+						reject(new Error('微信登录失败'))
+					}
+				});
+
+			}).then(code =>{
+				console.log('code:',code);
+				return uniCloud.callFunction({
+					name:'login',
+					data:{
+						code,
+						userInfo
+					}
+				});
+			}).then(res =>{
+				uni.hideLoading();
+				console.log(res);
+				if(res.result.status !== 0){
+					return new Promise.reject(new Error(res.result.msg))
+				}
+				console.log(res.result.data);
+				that.Login(res.result.data);
+				uni.setStorage({
+					key:'token',
+					data:res.result.token
+				});
+				uni.showModal({
+					content:'登录成功',
+					showCancel:false
+				});
+				uni.hideLoading();
+				uni.navigateBack();
+			})
+			.catch(err =>{
+				console.log(err);
+				uni.hideLoading();
+				uni.showModal({
+					content:'出现错误，请稍后再试'+err.message,
+					showCancel:false
+				})
+			})
+		}
+
 	}
+}
 </script>
 
 <style lang="scss" scoped>
-	.intro{
+.intro {
+	width: 100%;
+	height: 60vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	font-size: $font-size-base;
+	color: $text-color-assist;
+	image {
+		width: 165rpx;
+		height: 165rpx;
+	}
+	.tips {
+		line-height: 72rpx;
+		text-align: center;
+	}
+}
+.bottom {
+	height: 40vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 0 40px;
+	.login-btn {
 		width: 100%;
-		height: 60vh;
+		border-radius: 50rem !important;
 		display: flex;
-		flex-direction: column;
 		align-items: center;
-		justify-content: space-evenly;
-		font-size: $font-size-base;
-		color: $text-color-assist;
-		image{
-			width: 165rpx;
-			height: 165rpx;
-		}
-		.tips{
-			line-height: 72rpx;
-			text-align: center;
+		justify-content: center;
+		padding: 10rpx 0;
+	}
+	image {
+		width: 36rpx;
+		height: 30rpx;
+		margin-right: 10rpx;
+	}
+}
+.row {
+	.grid {
+		width: 20%;
+		image {
+			width: 60rpx;
+			height: 60rpx;
+			margin-bottom: 10rpx;
 		}
 	}
-	.bottom{
-		height: 40vh;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		padding: 0 40px;
-		.login-btn{
-			width: 100%;
-			border-radius: 50rem !important;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			padding: 10rpx 0;
-		}
-		image{
-			width: 36rpx;
-			height: 30rpx;
-			margin-right: 10rpx;
-		}
-	}
-	.row{
-		.grid{
-			width: 20%;
-			image{
-				width: 60rpx;
-				height: 60rpx;
-				margin-bottom: 10rpx;
-			}
-		}
-	}
-	
-	
-
+}
 </style>
