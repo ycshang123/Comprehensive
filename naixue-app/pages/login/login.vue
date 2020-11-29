@@ -9,7 +9,6 @@
 			</view>
 		</view>
 		<view class="bottom">
-			<!-- #ifdef MP-WEIXIN -->
 			<button
 				type="primary"
 				size="default"
@@ -21,7 +20,7 @@
 				<image src="/static/images/mine/wechat.png"></image>
 				微信一键登录
 			</button>
-			<!-- #endif -->
+
 			<view
 				class="d-flex flex-column justify-content-evenly align-items-center text-center"
 				style="height: 30vh;"
@@ -56,78 +55,75 @@
 </template>
 
 <script>
-import {mapState,mapMutations} from 'vuex'
+import { mapState, mapMutations } from 'vuex';
 export default {
 	data() {
-		return {
-
-		}
+		return {};
 	},
 	methods: {
 		...mapMutations(['Login']),
-		wxLogin(e){
+		wxLogin(e) {
 			const that = this;
 			let userInfo = e.detail.userInfo;
 			console.log(userInfo);
 			uni.showLoading({
-				title:'登录中……'
+				title: '登录中……'
 			});
-			return new Promise((resolve,reject) =>{
+			return new Promise((resolve, reject) => {
 				uni.login({
-					provider:'weixin',
+					provider: 'weixin',
 					success(login_res) {
-						if(login_res.code){
-							resolve(login_res.code)
-						}else{
+						if (login_res.code) {
+							resolve(login_res.code);
+						} else {
 							reject(new Error('微信登录失败'));
 						}
-
 					},
-					fail(e){
-						reject(new Error('微信登录失败'))
+					fail(e) {
+						reject(new Error('微信登录失败'));
 					}
 				});
-
-			}).then(code =>{
-				console.log('code:',code);
-				return uniCloud.callFunction({
-					name:'login',
-					data:{
-						code,
-						userInfo
-					}
-				});
-			}).then(res =>{
-				uni.hideLoading();
-				console.log(res);
-				if(res.result.status !== 0){
-					return new Promise.reject(new Error(res.result.msg))
-				}
-				console.log(res.result.data);
-				that.Login(res.result.data);
-				uni.setStorage({
-					key:'token',
-					data:res.result.token
-				});
-				uni.showModal({
-					content:'登录成功',
-					showCancel:false
-				});
-				uni.hideLoading();
-				uni.navigateBack();
 			})
-			.catch(err =>{
-				console.log(err);
-				uni.hideLoading();
-				uni.showModal({
-					content:'出现错误，请稍后再试'+err.message,
-					showCancel:false
+				.then(code => {
+					console.log('code:', code);
+					return uniCloud.callFunction({
+						name: 'login',
+						data: {
+							code,
+							userInfo
+						}
+					});
 				})
-			})
+				.then(res => {
+					uni.hideLoading();
+					console.log(res);
+					if (res.result.status !== 0) {
+						return new Promise.reject(new Error(res.result.msg));
+					}
+					console.log(res.result.data);
+					that.Login(res.result.data);
+					uni.setStorage({
+						key: 'token',
+						data: res.result.token
+					});
+					uni.showModal({
+						content: '登录成功',
+						showCancel: false
+					});
+					uni.hideLoading();
+					uni.navigateBack();
+				})
+				.catch(err => {
+					console.log(err);
+					uni.hideLoading();
+					uni.showModal({
+						content: '出现错误，请稍后再试' + err.message,
+						showCancel: false
+					});
+				});
 		}
-
 	}
-}
+};
 </script>
 
 <style lang="scss" scoped>

@@ -1,6 +1,5 @@
 {
   "pages": [
-    "pages/stores/stores",
     "pages/index/index",
     "pages/menu/menu",
     "pages/take-foods/take-foods",
@@ -9,7 +8,9 @@
     "pages/message/mesage",
     "pages/address/address",
     "pages/address/add",
-    "pages/address/edit"
+    "pages/address/edit",
+    "pages/stores/stores",
+    "pages/pay/pay"
   ],
   "subPackages": [],
   "window": {

@@ -1,14 +1,5 @@
 {
-	"pages": [
-		{
-		    "path" : "pages/stores/stores",
-		    "style" : {
-				"navigationBarBackgroundColor":"#F8F8F8",
-				"navigationBarTextStyle":"black",
-				"navigationBarTitleText":"选择门店"
-			}
-		},
-		{
+	"pages": [{
 			"path": "pages/index/index",
 			"style": {
 				"navigationStyle": "custom"
@@ -34,37 +25,46 @@
 				"navigationBarTextStyle": "black",
 				"navigationBarTitleText": "个人中心"
 			}
-		},{
-			"path":"pages/login/login"
+		}, {
+			"path": "pages/login/login"
 		},
 		{
-			"path":"pages/message/mesage"
+			"path": "pages/message/mesage"
+		}, {
+			"path": "pages/address/address",
+			"style": {
+				"navigationBarBackgroundColor": "#F8F8F8",
+				"navigationBarTextStyle": "black",
+				"navigationBarTitleText": "我的地址"
+			}
+		},
+		{
+			"path": "pages/address/add",
+			"style": {
+				"navigationBarBackgroundColor": "#F8F8F8",
+				"navigationBarTextStyle": "black",
+				"navigationBarTitleText": "添加地址"
+			}
+		},
+		{
+			"path": "pages/address/edit",
+			"style": {
+				"navigationBarBackgroundColor": "#F8F8F8",
+				"navigationBarTextStyle": "black",
+				"navigationBarTitleText": "修改地址"
+			}
+		}, {
+			"path": "pages/stores/stores",
+			"style": {
+				"navigationBarBackgroundColor": "#F8F8F8",
+				"navigationBarTextStyle": "black",
+				"navigationBarTitleText": "选择门店"
+			}
 		}
 	    ,{
-            "path" : "pages/address/address",
-            "style" : {
-				"navigationBarBackgroundColor":"#F8F8F8",
-				"navigationBarTextStyle":"black",
-				"navigationBarTitleText":"我的地址"
-			}
-        },
-		{
-		    "path" : "pages/address/add",
-		    "style" : {
-		    	"navigationBarBackgroundColor":"#F8F8F8",
-		    	"navigationBarTextStyle":"black",
-		    	"navigationBarTitleText":"添加地址"
-		    }
-		},
-		{
-		    "path" : "pages/address/edit",
-		    "style" : {
-		    	"navigationBarBackgroundColor":"#F8F8F8",
-		    	"navigationBarTextStyle":"black",
-		    	"navigationBarTitleText":"修改地址"
-		    }
-		}
-        
+            "path" : "pages/pay/pay",
+            "style" : {}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

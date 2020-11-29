@@ -10,11 +10,11 @@
 		<view class="content">
 			<!-- 点餐入口 -->
 			<view class="entrance">
-				<view class="item">
+				<view class="item" @tap="takein">
 					<image src="../../static/images/index/zq.png" class="icon"></image>
 					<view class="title">自取</view>
 				</view>
-				<view class="item">
+				<view class="item" @tap="takeout">
 					<image src="../../static/images/index/wm.png" class="icon" mode=""></image>
 					<view class="title">外卖</view>
 				</view>
@@ -97,7 +97,30 @@ export default {
 	computed: {
 		...mapState(['isLogin', 'orderType', 'userInfo', 'chooseStore'])
 	},
-	methods: {}
+	methods: {
+		takein() {
+			if (JSON.stringify(this.chooseStore) === '{}') {
+				uni.navigateTo({
+					url: '../stores/stores'
+				});
+			}
+			this.$store.commit('SET_ORDERTYPE', 'takein');
+			uni.switchTab({
+				url: '../menu/menu'
+			});
+		},
+		takeout() {
+			if (!this.isLogin) {
+				uni.navigateTo({
+					url: '/pages/login/login'
+				});
+			} else {
+				uni.navigateTo({
+					url: '/pages/address/address?is_choose=true'
+				});
+			}
+		}
+	}
 };
 </script>
 
