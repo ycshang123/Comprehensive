@@ -70,7 +70,6 @@
 
 <script>
 import listCell from '@/components/list-cell/list-cell';
-import { mapState } from 'vuex';
 export default {
 	data() {
 		return {
@@ -88,7 +87,7 @@ export default {
 		listCell
 	},
 
-	mathods: {
+	methods: {
 		save() {
 			let data = this.form;
 			return uniCloud

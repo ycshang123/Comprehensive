@@ -1,6 +1,14 @@
 {
 	"pages": [
 		{
+		    "path" : "pages/stores/stores",
+		    "style" : {
+				"navigationBarBackgroundColor":"#F8F8F8",
+				"navigationBarTextStyle":"black",
+				"navigationBarTitleText":"选择门店"
+			}
+		},
+		{
 			"path": "pages/index/index",
 			"style": {
 				"navigationStyle": "custom"
@@ -56,6 +64,7 @@
 		    	"navigationBarTitleText":"修改地址"
 		    }
 		}
+        
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

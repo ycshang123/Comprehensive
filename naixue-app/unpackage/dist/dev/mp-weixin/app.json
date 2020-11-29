@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/stores/stores",
     "pages/index/index",
     "pages/menu/menu",
     "pages/take-foods/take-foods",
@@ -48,6 +49,11 @@
         "selectedIconPath": "static/images/tabBar/mine_selected.png"
       }
     ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "查找附近门店"
+    }
   },
   "usingComponents": {}
 }
