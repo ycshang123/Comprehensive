@@ -586,7 +586,7 @@ var _vuex = __webpack_require__(/*! vuex */ 12);function ownKeys(object, enumera
 
     },
     init: function init() {var _this3 = this;
-      if (Object.keys(this.choseStore).length == 0 && this.orderType == 'takein') {
+      if (Object.keys(this.choseStore).length == 0) {
         uni.navigateTo({
           url: '../stores/stores' });
 
@@ -737,16 +737,67 @@ var _vuex = __webpack_require__(/*! vuex */ 12);function ownKeys(object, enumera
     handleCartItemAdd: function handleCartItemAdd(index) {
       this.cart[index].number += 1;
     },
-    topay: function topay() {
+    topay: function topay() {var _this7 = this;
       if (!this.isLogin) {
         uni.navigateTo({
           url: '../login/login' });
 
         return;
       }
-      uni.navigateTo({
-        url: '../pay/pay?total=' + this.getCartGoodsPrice });
+      uni.showLoading({
+        title: '加载中……' });
 
+      return uniCloud.
+      callFunction({
+        name: 'validateToken',
+        data: {
+          token: uni.getStorageSync('token') } }).
+
+
+      then(function (res) {
+        if (res.result.status === 0) {
+          uni.hideLoading();
+          if (_this7.orderType == 'takein') {
+            var data = {
+              openId: res.result.openId,
+              goodsInOrder: _this7.cart,
+              chooseStore: _this7.choseStore.name };
+
+            return uniCloud.callFunction({
+              name: 'order',
+              data: {
+                data: data,
+                action: 'addTakein' } });
+
+
+          } else if (_this7.orderType == 'takeout') {
+            var _data = {
+              openId: res.result.openId,
+              goodsInOrder: _this7.cart,
+              chooseStore: _this7.choseAddress.storeName,
+              order_address: _this7.choseAddress._id };
+
+            return uniCloud.callFunction({
+              name: 'order',
+              data: {
+                data: _data,
+                action: 'addTakeout' } });
+
+
+          }
+        } else {
+          uni.hideLoading();
+          uni.showModal({
+            content: res.result.msg,
+            showCancel: false });
+
+        }
+      }).
+      then(function (resData) {
+        uni.navigateTo({
+          url: '../pay/pay?order_id=' + resData.result.order_id });
+
+      });
     } }) };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/uni-cloud/dist/index.js */ 27)["default"]))
 
