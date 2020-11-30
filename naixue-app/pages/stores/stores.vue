@@ -32,7 +32,7 @@
 						<view class="round"><image src="../../static/images/store/store-nav.png"></image></view>
 					</view>
 				</view>
-			</view>
+			</view>      
 		</view>
 	</view>
 </template>
