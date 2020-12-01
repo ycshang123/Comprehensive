@@ -14,8 +14,8 @@
 		data() {
 			return {
 				loadedBookList: [],
-				loadMoreStatus: 'loading'
-			}
+				loadMoreStatus: '   loading'
+			}          
 		},
 		components: {
 			bookList,
