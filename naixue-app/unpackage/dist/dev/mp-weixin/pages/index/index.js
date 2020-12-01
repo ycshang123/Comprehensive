@@ -258,6 +258,11 @@ var _vuex = __webpack_require__(/*! vuex */ 12);function ownKeys(object, enumera
           url: '/pages/address/address?is_choose=true' });
 
       }
+    },
+    memberCode: function memberCode() {
+      uni.navigateTo({
+        url: '../member-code/member-code' });
+
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 

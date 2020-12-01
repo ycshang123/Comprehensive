@@ -31,7 +31,7 @@
 						<view class="iconfont iconarrow-right"></view>
 					</view>
 				</view>
-				<view class="qrcode_section">
+				<view class="qrcode_section" @click="memberCode">
 					<image src="../../static/images/index/qrcode.png" mode=""></image>
 					<text>会员码</text>
 				</view>
@@ -109,7 +109,7 @@ export default {
 				url: '../menu/menu'
 			});
 		},
-		takeout() {
+		takeout() { 
 			if (!this.isLogin) {
 				uni.navigateTo({
 					url: '/pages/login/login'
@@ -119,6 +119,11 @@ export default {
 					url: '/pages/address/address?is_choose=true'
 				});
 			}
+		},
+		memberCode(){
+			uni.navigateTo({
+				url:'../member-code/member-code'
+			})
 		}
 	}
 };
