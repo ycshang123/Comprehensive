@@ -18,8 +18,6 @@ export default {
 		options.data = options.data || common.data;
 		options.method = options.method || common.method;
 		options.dataType = options.dataType || common.dataType;
-
-
 		// 请求
 		return new Promise((res, rej) => {
 			uni.request({
@@ -40,7 +38,6 @@ export default {
 						}
 						return rej(data)
 					}
-
 					// 成功
 					res(data)
 				},
